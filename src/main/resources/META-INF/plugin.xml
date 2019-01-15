@@ -1,0 +1,27 @@
+<idea-plugin>
+    <id>Cherkasik.CherkasikPlugin</id>
+    <name>Don't know what this will be</name>
+    <vendor email="ilyakopeysk@gmail.com" url="https://vk.com/ilya_cherkasik">CherkasikCo</vendor>
+
+    <description><![CDATA[
+    My project for ITMO subject. <br>
+    Need to write here more.
+    ]]></description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <group id="CherkasikPlugin.SampleMenu" text="Greeting" description="Greeting menu">
+            <add-to-group group-id="MainMenu" anchor="last"/>
+            <action id="CherkasikPlugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
+        </group>
+    </actions>
+</idea-plugin>
