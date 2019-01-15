@@ -8,20 +8,17 @@
     Need to write here more.
     ]]></description>
 
-    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
-         on how to target different products -->
-    <!-- uncomment to enable plugin in all products
-    <depends>com.intellij.modules.lang</depends>
-    -->
+    If you are tired and want to see some memes, this plugin is for YOU!!!
 
     <extensions defaultExtensionNs="com.intellij">
         <!-- Add your extensions here -->
     </extensions>
 
     <actions>
-        <group id="CherkasikPlugin.SampleMenu" text="Greeting" description="Greeting menu">
-            <add-to-group group-id="MainMenu" anchor="last"/>
-            <action id="CherkasikPlugin.Textboxes" class="HelloAction" text="Hello" description="Says hello"/>
+        <group id="GoToPikabu">
+            <add-to-group group-id="HelpMenu" anchor="first"/>
+            <action class="PikabuMem" id="GotoPikabuAction" text="I want memes"
+                    description="I really need some memes"/>
         </group>
     </actions>
 </idea-plugin>
