@@ -8,5 +8,4 @@ public interface BrowserView {
     public void load(String url);
     public void reload();
     public JComponent getNode();
-    public void setPanel(BrowserPanel panel);
 }

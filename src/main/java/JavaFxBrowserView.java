@@ -23,8 +23,6 @@ public class JavaFxBrowserView implements BrowserView {
 
     private JFXPanel jfxPanel;
 
-    private BrowserPanel panel;
-
     static {
         TrustManager[] trustAllCerts = new TrustManager[]{
                 new X509TrustManager() {
@@ -42,7 +40,6 @@ public class JavaFxBrowserView implements BrowserView {
                 }
         };
 
-        // Install the all-trusting trust manager
         try {
             SSLContext sc = SSLContext.getInstance("SSL");
             sc.init(null, trustAllCerts, new java.security.SecureRandom());
@@ -54,11 +51,6 @@ public class JavaFxBrowserView implements BrowserView {
     public JavaFxBrowserView() {
     }
 
-    public void setPanel(BrowserPanel panel) {
-        this.panel = panel;
-    }
-
-    @Override
     public void init() {
         reload();
     }
@@ -70,7 +62,6 @@ public class JavaFxBrowserView implements BrowserView {
         });
     }
 
-    @Override
     public void reload() {
         jfxPanel = new JFXPanel();
         Platform.runLater(() -> {
@@ -83,7 +74,6 @@ public class JavaFxBrowserView implements BrowserView {
         });
     }
 
-    @Override
     public JComponent getNode() {
         Platform.runLater(() -> {
             BorderPane borderPane = new BorderPane();

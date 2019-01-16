@@ -39,7 +39,7 @@ public class BrowserPanel extends JPanel {
 
         buttonGo.setEnabled(true);
 
-        buttonGo.addActionListener(event -> this.webBrowserLoad());
+        buttonGo.addActionListener(event -> webBrowserLoad());
 
         return topControlPanel;
     }
@@ -51,7 +51,12 @@ public class BrowserPanel extends JPanel {
         int dateDay = random.nextInt(27) + 1;
         int dateMonth = random.nextInt(11) + 1;
         int dateYear = random.nextInt(12) + 2008;
-        browserView.load(pikabuSite + dateDay + "-" + dateMonth + "-" + dateYear);
+        if (dateDay < 10){pikabuSite += '0' + Integer.toString(dateDay) + '-';}
+        else {pikabuSite += Integer.toString(dateDay) + '-';}
+        if (dateMonth < 10){pikabuSite += '0' + Integer.toString(dateMonth) + '-';}
+        else {pikabuSite += Integer.toString(dateMonth) + '-';}
+        pikabuSite += Integer.toString(dateYear);
+        browserView.load(pikabuSite);
     }
 
     private void initWebView() {
@@ -65,7 +70,6 @@ public class BrowserPanel extends JPanel {
             add(topControllers);
 
             browserView.init();
-            browserView.setPanel(this);
 
             JComponent webPanel = browserView.getNode();
             add(webPanel);
