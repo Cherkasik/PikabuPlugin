@@ -11,7 +11,7 @@
     If you are tired and want to see some memes, this plugin is for YOU!!!
 
     <extensions defaultExtensionNs="com.intellij">
-        <!-- Add your extensions here -->
+        <toolWindow id="PikabuMemPage" icon="/icon/pikabu_small.png" anchor="right" factoryClass="BrowserWindow"/>
     </extensions>
 
     <actions>

@@ -6,9 +6,7 @@ import javax.swing.*;
 import java.util.Random;
 
 public class PikabuMem extends AnAction {
-    public PikabuMem() {
-        super(null, null, new ImageIcon(PikabuMem.class.getClassLoader().getResource("icon/pikabu.ico")));
-    }
+    public PikabuMem(){    }
 
     public void actionPerformed(AnActionEvent event) {
         String pikabuSite = "https://www.pikabu.ru/best/";
