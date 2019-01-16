@@ -5,21 +5,13 @@
 
     <description><![CDATA[
     My project for ITMO subject. <br>
-    Need to write here more.
+    If you are tired and want to see some memes, this plugin is for YOU!!!
     ]]></description>
 
-    If you are tired and want to see some memes, this plugin is for YOU!!!
-
     <extensions defaultExtensionNs="com.intellij">
-        <toolWindow id="PikabuMemPage" icon="/icon/pikabu_small.png" anchor="right" factoryClass="BrowserWindow"/>
+        <toolWindow id="MemPage" icon="/icon/pikabu_small.png" anchor="right" factoryClass="BrowserWindow"/>
     </extensions>
 
     <actions>
-        <group id="GoToPikabu">
-            <add-to-group group-id="HelpMenu" anchor="first"/>
-            <add-to-group group-id="ActiveToolwindowGroup" anchor="first"/>
-            <action class="PikabuMem" id="GotoPikabuAction" text="I want memes"
-                    description="I really need some memes"/>
-        </group>
     </actions>
 </idea-plugin>
